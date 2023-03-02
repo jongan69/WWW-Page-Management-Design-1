@@ -20,7 +20,16 @@
     <!--====== Style CSS ======-->
     <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
     <link rel="stylesheet" href="assets/css/tailwind.css">
+    <!-- <style>
+        /* Internal style sheet for menu frame */
+        #menu {
+            background-color: #ec0909;
+            margin: 10px;
+        }
 
+        /* External style sheet for all other documents */
+        @import url("./assets/css/tailwind.css");
+    </style> -->
 </head>
 
 <body>
@@ -50,7 +59,7 @@
                 <div class="row">
                     <div class="w-full">
                         <nav class="flex items-center justify-between navbar navbar-expand-lg">
-                            <a class="mr-4 navbar-brand" href="index.html">
+                            <a class="mr-4 navbar-brand" href="index.html" title="logo">
                                 <svg width="80" height="80">
                                     <rect x="20" y="20" width="250" height="250" style="fill:blue">
                                         <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s"
@@ -59,8 +68,8 @@
                                     Sorry, your browser does not support inline SVG.
                                 </svg>
                             </a>
-                            <button class="block navbar-toggler focus:outline-none lg:hidden" type="button"
-                                data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne"
+                            <button type="button" class="block navbar-toggler focus:outline-none lg:hidden"
+                                type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne"
                                 aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="toggler-icon"></span>
                                 <span class="toggler-icon"></span>
@@ -72,16 +81,16 @@
                                 <ul id="nav"
                                     class="items-center content-start mr-auto lg:justify-end navbar-nav lg:flex">
                                     <li class="nav-item active">
-                                        <a class="page-scroll" href="#home">Home</a>
+                                        <a class="page-scroll" href="#home" title="home">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#about">About</a>
+                                        <a class="page-scroll" href="#about" title="about">About</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#blog">Blog</a>
+                                        <a class="page-scroll" href="#blog" title="blog">Blog</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#projects">Projects</a>
+                                        <a class="page-scroll" href="#projects" title="projects">Projects</a>
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->
@@ -126,12 +135,26 @@
     </header>
     <!--====== HEADER PART ENDS ======-->
 
+    <!--====== FRAME START ======-->
+    <frameset cols="20%, 80%">
+        <frame src="index.html" id="home">
+            <frame src="#contact" id="contact">
+    </frameset>
+    <noframes>
+
+        <body>
+            <p>This page uses frames. Your browser doesn't support them.</p>
+        </body>
+    </noframes>
+    <!--====== FRAME  END ======-->
+
     <!--====== TOOLKIT PART START ======-->
     <section id="features" class="services-area pt-120">
         <div class="container">
             <div class="justify-center row">
                 <div class="w-full lg:w-2/3">
                     <div class="pb-10 text-center section-title">
+                        <hr>
                         <div class="m-auto line"></div>
                         <h3 class="title">My Toolkit <span> for building:</span></h3>
                     </div> <!-- section title -->
@@ -158,8 +181,14 @@
                             <i class="lni lni-baloon"></i>
                         </div>
                         <div class="mt-8 services-content">
-                            <h4 class="mb-8 text-xl font-bold text-gray-900">Mobile Apps</h4>
-                            <p class="mb-8">React Native is a powerful cross-platform mobile application development framework created by Facebook. It allows developers to create native apps for both Android and iOS using JavaScript and React. It also provides an efficient way to create user interfaces and build custom components with a highly responsive design. React Native utilizes a powerful JavaScript library, providing developers with an easy way to create complex, flexible, and interactive mobile applications.</p>
+                            <h1 class="mb-8 text-xl font-bold text-gray-900">Mobile Apps</h1>
+                            <p class="mb-8"><b><i>React Native</i></b> is a powerful cross-platform mobile application
+                                development
+                                framework created by Facebook. It allows developers to create native apps for both
+                                Android and iOS using JavaScript and React. It also provides an efficient way to create
+                                user interfaces and build custom components with a highly responsive design. React
+                                Native utilizes a powerful JavaScript library, providing developers with an easy way to
+                                create complex, flexible, and interactive mobile applications.</p>
                             <a class="duration-300 hover:text-theme-color" href="https://reactnative.dev/">Learn More <i
                                     class="ml-2 lni lni-chevron-right"></i></a>
                         </div>
@@ -187,9 +216,16 @@
                         </div>
                         <div class="mt-8 services-content">
                             <h4 class="mb-8 text-xl font-bold text-gray-900">Web</h4>
-                            <p class="mb-8">React Typescript is a programming language based on JavaScript that is used by engineers to create interactive user interfaces and web applications. It is a statically typed language that can be used to create user interfaces with type safety, improved software maintainability and usability, and better code readability. In addition, React Typescript can be used to create cross-platform applications with the same codebase.</p>
-                            <a class="duration-300 hover:text-theme-color" href="https://codesandbox.io/p/github/jongan69/React-TS-Tailwind-UI-Library/main?workspaceId=189e62e6-e85b-4645-9288-685b65ed23b0&file=%2Fsrc%2FApp.tsx&workspace=%257B%2522activeFileId%2522%253A%2522clea8iiqc001og3hr62p1bkx2%2522%252C%2522openFiles%2522%253A%255B%2522%252FREADME.md%2522%255D%252C%2522sidebarPanel%2522%253A%2522EXPLORER%2522%252C%2522gitSidebarPanel%2522%253A%2522COMMIT%2522%252C%2522spaces%2522%253A%257B%2522clea8il68071r356kt4q0cez8%2522%253A%257B%2522key%2522%253A%2522clea8il68071r356kt4q0cez8%2522%252C%2522name%2522%253A%2522Default%2522%252C%2522devtools%2522%253A%255B%257B%2522type%2522%253A%2522PREVIEW%2522%252C%2522taskId%2522%253A%2522dev%2522%252C%2522port%2522%253A5173%252C%2522key%2522%253A%2522clekzdcoz00e8356jmxrhmyrm%2522%252C%2522isMinimized%2522%253Afalse%257D%252C%257B%2522type%2522%253A%2522TASK_LOG%2522%252C%2522taskId%2522%253A%2522dev%2522%252C%2522key%2522%253A%2522clekzd9qb007m356jy0347pvt%2522%252C%2522isMinimized%2522%253Afalse%257D%255D%257D%257D%252C%2522currentSpace%2522%253A%2522clea8il68071r356kt4q0cez8%2522%252C%2522spacesOrder%2522%253A%255B%2522clea8il68071r356kt4q0cez8%2522%255D%252C%2522hideCodeEditor%2522%253Afalse%257D">Learn More <i
-                                    class="ml-2 lni lni-chevron-right"></i></a>
+                            <p class="mb-8"><b>React</b> Typescript is a programming language based on JavaScript that
+                                is used
+                                by engineers to create interactive user interfaces and web applications. It is a
+                                statically typed language that can be used to create user interfaces with type safety,
+                                improved software maintainability and usability, and better code readability. In
+                                addition, React Typescript can be used to create cross-platform applications with the
+                                same codebase.</p>
+                            <a class="duration-300 hover:text-theme-color"
+                                href="https://codesandbox.io/p/github/jongan69/React-TS-Tailwind-UI-Library/main?workspaceId=189e62e6-e85b-4645-9288-685b65ed23b0&file=%2Fsrc%2FApp.tsx&workspace=%257B%2522activeFileId%2522%253A%2522clea8iiqc001og3hr62p1bkx2%2522%252C%2522openFiles%2522%253A%255B%2522%252FREADME.md%2522%255D%252C%2522sidebarPanel%2522%253A%2522EXPLORER%2522%252C%2522gitSidebarPanel%2522%253A%2522COMMIT%2522%252C%2522spaces%2522%253A%257B%2522clea8il68071r356kt4q0cez8%2522%253A%257B%2522key%2522%253A%2522clea8il68071r356kt4q0cez8%2522%252C%2522name%2522%253A%2522Default%2522%252C%2522devtools%2522%253A%255B%257B%2522type%2522%253A%2522PREVIEW%2522%252C%2522taskId%2522%253A%2522dev%2522%252C%2522port%2522%253A5173%252C%2522key%2522%253A%2522clekzdcoz00e8356jmxrhmyrm%2522%252C%2522isMinimized%2522%253Afalse%257D%252C%257B%2522type%2522%253A%2522TASK_LOG%2522%252C%2522taskId%2522%253A%2522dev%2522%252C%2522key%2522%253A%2522clekzd9qb007m356jy0347pvt%2522%252C%2522isMinimized%2522%253Afalse%257D%255D%257D%257D%252C%2522currentSpace%2522%253A%2522clea8il68071r356kt4q0cez8%2522%252C%2522spacesOrder%2522%253A%255B%2522clea8il68071r356kt4q0cez8%2522%255D%252C%2522hideCodeEditor%2522%253Afalse%257D">Learn
+                                More <i class="ml-2 lni lni-chevron-right"></i></a>
                         </div>
                     </div> <!-- single services -->
                 </div>
@@ -215,8 +251,17 @@
                         </div>
                         <div class="mt-8 services-content">
                             <h4 class="mb-8 text-xl font-bold text-gray-900">API</h4>
-                            <p class="mb-8">Node.js is a JavaScript runtime environment built on Chrome's V8 JavaScript engine. It allows developers to write server-side applications in JavaScript and can be used to create web applications and network applications. TypeScript is an open-source language that builds on JavaScript by adding static type-checking, classes, interfaces, and more. Its main purpose is to enable large-scale application development with JavaScript, making it easier to maintain and debug code. As an engineer, Node.js and TypeScript can be used together to create powerful web applications that are easier to develop, debug, and maintain.</p>
-                            <a class="duration-300 hover:text-theme-color" href="https://replit.com/@JonGan2/node-discord-openai-bot#index.js">Learn More <i
+                            <p class="mb-8"><b>Node.js</b> is a JavaScript runtime environment built on Chrome's V8
+                                JavaScript
+                                engine. It allows developers to write server-side applications in JavaScript and can be
+                                used to create web applications and network applications. TypeScript is an open-source
+                                language that builds on JavaScript by adding static type-checking, classes, interfaces,
+                                and more. Its main purpose is to enable large-scale application development with
+                                JavaScript, making it easier to maintain and debug code. As an engineer, Node.js and
+                                TypeScript can be used together to create powerful web applications that are easier to
+                                develop, debug, and maintain.</p>
+                            <a class="duration-300 hover:text-theme-color"
+                                href="https://replit.com/@JonGan2/node-discord-openai-bot#index.js">Learn More <i
                                     class="ml-2 lni lni-chevron-right"></i></a>
                         </div>
                     </div> <!-- single services -->
@@ -238,7 +283,13 @@
                             <h3 class="title">I Build Modern <span>UI's using Tailwind CSS and JavaScript</span>
                             </h3>
                         </div> <!-- section title -->
-                        <p class="mb-8">CSS-in-JS, such as Tailwind, provides developers with a different approach to styling websites and applications compared to traditional CSS. It allows developers to have more flexibility and control when it comes to styling. Instead of having to write a separate class for every style, developers can write a single class and modify it with additional modifiers to create the desired style. CSS-in-JS also allows developers to use a more consistent and modernic syntax compared to traditional CSS. Finally, with Tailwind, you can use utility classes, making it easier to create more complex and customized styling.</p>
+                        <p class="mb-8">CSS-in-JS, such as Tailwind, provides developers with a different approach to
+                            styling websites and applications compared to traditional CSS. It allows developers to have
+                            more flexibility and control when it comes to styling. Instead of having to write a separate
+                            class for every style, developers can write a single class and modify it with additional
+                            modifiers to create the desired style. CSS-in-JS also allows developers to use a more
+                            consistent and modernic syntax compared to traditional CSS. Finally, with Tailwind, you can
+                            use utility classes, making it easier to create more complex and customized styling.</p>
                         <a href="https://tailwindcss.com/docs/installation"
                             class="main-btn gradient-btn">Documentation</a>
                     </div> <!-- about content -->
@@ -260,6 +311,36 @@
                             </rect>
                             Sorry, your browser does not support inline SVG.
                         </svg>
+                        <!--====== TABLE STARTS ======-->
+                        <div class="justify-center row">
+                            <table class="table">
+                                <thead>
+                                    <tr colspan="2">
+                                        <th>Experience</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-body">
+                                    <tr>
+                                        <td>JS: </td>
+                                        <td> 5 years </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Python: </td>
+                                        <td> 4 years </td>
+                                    </tr>
+                                    <tr>
+                                        <td>CSS: </td>
+                                        <td> 5 years </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Python: </td>
+                                        <td> 4 years</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--====== TABLE ENDS ======-->
                     </div> <!-- about image -->
                 </div>
             </div> <!-- row -->
@@ -268,16 +349,16 @@
     <!--====== ABOUT PART ENDS ======-->
 
     <!--====== BLOG PART START ======-->
-    <section id="blog" class="blog-area pt-120">
+    <!-- <section id="blog" class="blog-area pt-120">
         <div class="container">
             <div class="row">
                 <div class="w-full lg:w-1/2">
                     <div class="pb-8 section-title">
                         <div class="line"></div>
                         <h3 class="title"><span>My Recent</span> Blog Posts</h3>
-                    </div> <!-- section title -->
+                    </div> 
                 </div>
-            </div> <!-- row -->
+            </div> 
             <div class="justify-center row">
                 <div class="w-full md:w-2/3 lg:w-1/3">
                     <div class="mx-4 mt-10 single-blog wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
@@ -296,13 +377,13 @@
                                 <i class="ml-2 lni lni-chevron-right"></i>
                             </a>
                         </div>
-                    </div> <!-- single blog -->
+                    </div> 
                 </div>
 
             </div>
-        </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
+        </div> 
+        </div> 
+    </section> -->
     <!--====== BLOG PART ENDS ======-->
 
     <!--====== PROJECTS PART START ======-->
@@ -328,8 +409,7 @@
                                 <li class="ml-12">September 2, 2022</li>
                             </ul>
                             <p class="mb-6 text-2xl leading-snug text-gray-900">Project 1: FitMint</p>
-                            <a class="text-theme-color-2"
-                                href="https://ethglobal.com/showcase/fitmint-247pb">
+                            <a class="text-theme-color-2" href="https://ethglobal.com/showcase/fitmint-247pb">
                                 Demo
                                 <i class="ml-2 lni lni-chevron-right"></i>
                             </a>
@@ -346,8 +426,7 @@
                                 <li class="ml-12">September 2, 2022</li>
                             </ul>
                             <p class="mb-6 text-2xl leading-snug text-gray-900">Project 2: Unique Pod</p>
-                            <a class="text-theme-color-2"
-                                href="https://devpost.com/software/unique-pod">
+                            <a class="text-theme-color-2" href="https://devpost.com/software/unique-pod">
                                 Demo
                                 <i class="ml-2 lni lni-chevron-right"></i>
                             </a>
@@ -364,8 +443,7 @@
                                 <li class="ml-12">September 2, 2022</li>
                             </ul>
                             <p class="mb-6 text-2xl leading-snug text-gray-900">Project 3: AI Readme</p>
-                            <a class="text-theme-color-2"
-                                href="https://github.com/jongan69/ai-readme">
+                            <a class="text-theme-color-2" href="https://github.com/jongan69/ai-readme">
                                 Demo
                                 <i class="ml-2 lni lni-chevron-right"></i>
                             </a>
@@ -402,7 +480,7 @@
                             <form action="#" class="relative focus:outline-none">
                                 <input type="email" placeholder="Enter eamil"
                                     class="w-full py-4 pl-6 pr-40 duration-300 border-2 rounded focus:border-theme-color focus:outline-none">
-                                <button class="main-btn gradient-btn">Subscribe</button>
+                                <button type="button" class="main-btn gradient-btn">Subscribe</button>
                             </form>
                         </div>
                     </div>
@@ -412,7 +490,7 @@
                 <div class="row">
                     <div class="w-4/5 md:w-3/5 lg:w-2/6">
                         <div class="mt-12 footer-about wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                            <a class="inline-block mb-8 logo" href="index.html">
+                            <a title="logo-footer" class="inline-block mb-8 logo" href="index.html">
                                 <svg width="80" height="80">
                                     <rect x="20" y="20" width="250" height="250" style="fill:blue">
                                         <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s"
@@ -440,7 +518,9 @@
                                     <ul class="link">
                                         <li><a href="#">Home</a></li>
                                         <li><a href="https://github.com/jongan69?tab=repositories">Portfolio</a></li>
-                                        <li><a href="https://www.linkedin.com/newsletters/red-dev-redemption-6915857887563030528/">Blog</a></li>
+                                        <li><a
+                                                href="https://www.linkedin.com/newsletters/red-dev-redemption-6915857887563030528/">Blog</a>
+                                        </li>
                                         <li><a href="#projects">Projects</a></li>
                                     </ul>
                                 </div> <!-- footer wrapper -->
@@ -465,7 +545,7 @@
     <!--====== FOOTER PART ENDS ======-->
 
     <!--====== BACK TOP TOP PART START ======-->
-    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <a title="backToTop" href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
     <!--====== BACK TOP TOP PART ENDS ======-->
 
     <!--====== Jquery js ======-->

@@ -1,18 +1,25 @@
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,700|Lato:300,400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700|Lato:300,400,700&display=swap");
 
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
-h1, h2, h3, h4, h5, h6,
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  font-family: 'Poppins', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-family: "Poppins", sans-serif;
 }
 p {
   font-size: 16px;
@@ -49,14 +56,14 @@ p {
 .sticky .toggler-icon {
   @apply bg-gray-900;
 }
-.active>.toggler-icon:nth-child(1) {
+.active > .toggler-icon:nth-child(1) {
   @apply transform rotate-45;
   top: 7px;
 }
-.active>.toggler-icon:nth-child(2) {
+.active > .toggler-icon:nth-child(2) {
   @apply opacity-0;
 }
-.active>.toggler-icon:nth-child(3) {
+.active > .toggler-icon:nth-child(3) {
   top: -8px;
   transform: rotate(135deg);
 }
@@ -78,12 +85,22 @@ p {
   @apply text-theme-color;
 }
 .gradient-btn {
-  background-image: linear-gradient(to right, #fe8464 0%, #fe6e9a 50%, #fe8464 100%);
+  background-image: linear-gradient(
+    to right,
+    #fe8464 0%,
+    #fe6e9a 50%,
+    #fe8464 100%
+  );
   background-size: 200% auto;
   overflow: hidden;
 }
 .gradient-btn-2 {
-  background-image: linear-gradient(to right, #33c8c1 0%, #119bd2 50%, #33c8c1 100%);
+  background-image: linear-gradient(
+    to right,
+    #33c8c1 0%,
+    #119bd2 50%,
+    #33c8c1 100%
+  );
 }
 .gradient-btn:hover {
   background-position: right center;
@@ -123,9 +140,7 @@ p {
   @apply font-normal;
 }
 
-
 .single-services {
-
   @apply px-8 py-12 mx-4 mt-8 text-center duration-300 bg-white border-2 border-transparent rounded-lg shadow-lg;
 }
 .single-services:hover {
@@ -161,7 +176,6 @@ p {
   @apply absolute top-0 left-0 h-full;
 }
 
-
 .video-icon a {
   @apply flex items-center justify-center w-16 h-16 bg-white rounded-full text-theme-color-2;
 }
@@ -172,21 +186,20 @@ p {
   @apply relative z-10 mt-16;
 }
 .single-counter::before {
-  content: '';
+  content: "";
   border-radius: 60px;
   z-index: -1;
   @apply absolute top-0 left-0 w-full h-full transform -rotate-45;
 }
 .counter-color-1::before {
-  background-image: linear-gradient(#33c8c1 0%,#119bd2 100%);
+  background-image: linear-gradient(#33c8c1 0%, #119bd2 100%);
 }
 .counter-color-2::before {
-  background-image: linear-gradient(#fe8464 0%,#fe6e9a 100%);
+  background-image: linear-gradient(#fe8464 0%, #fe6e9a 100%);
 }
 .counter-color-3::before {
-  background-image: linear-gradient(#361cc1 0%,#2e82ef 100%);
+  background-image: linear-gradient(#361cc1 0%, #2e82ef 100%);
 }
-
 
 .single-team {
   @apply mx-4 overflow-hidden duration-300 rounded-lg shadow-sm;
@@ -203,8 +216,8 @@ p {
   @apply relative z-10 inline-flex px-3 overflow-hidden bg-white bg-opacity-25 rounded-full;
 }
 .team-social ul::before {
-  content: '';
-  background-image: linear-gradient(#fe8464 0%,#fe6e9a 100%);
+  content: "";
+  background-image: linear-gradient(#fe8464 0%, #fe6e9a 100%);
   z-index: -1;
   @apply absolute top-0 left-0 invisible w-full h-full duration-300 opacity-0;
 }
@@ -217,9 +230,6 @@ p {
 .team-social ul a:hover {
   @apply text-theme-color;
 }
-
-
-
 
 .single-testimonial {
   @apply px-8 py-10 mx-4 mt-8 mb-12 duration-300 bg-white border-2 border-transparent rounded-lg shadow-lg;
@@ -259,7 +269,7 @@ p {
 }
 
 .subscribe-form .main-btn {
-  border-radius: 0 .25em .25em 0;
+  border-radius: 0 0.25em 0.25em 0;
   @apply absolute top-0 right-0 h-full py-4;
 }
 @media (max-width: 500px) {
@@ -271,15 +281,12 @@ p {
   }
 }
 
-
 .footer-bg {
   z-index: -1;
   @apply absolute bottom-0 left-0 w-full h-full bg-top bg-no-repeat bg-cover;
 }
 
-
 .footer-social li a {
-  
   @apply inline-block mr-6 text-2xl text-white duration-300;
 }
 .footer-social li a:hover {
@@ -296,7 +303,7 @@ p {
 }
 
 .back-to-top {
-  background-image: linear-gradient(to right, #361cc1 0%,#2e82ef 100%);
+  background-image: linear-gradient(to right, #361cc1 0%, #2e82ef 100%);
   background-size: 200% auto;
   @apply fixed bottom-0 right-0 z-20 flex items-center justify-center w-10 h-10 mb-8 mr-8 overflow-hidden text-white duration-300 rounded;
 }
@@ -304,3 +311,10 @@ p {
   @apply bg-right;
 }
 
+.table {
+  @apply border: 1px solid #333 !important;
+}
+
+.table-body {
+  @apply background-color: #333;
+}
