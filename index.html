@@ -20,7 +20,54 @@
     <!--====== Style CSS ======-->
     <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
     <link rel="stylesheet" href="assets/css/tailwind.css">
+    <style>
+        /* Styling for fixed/floating box */
+        .message-box {
+            background-color: #F5F5F5;
+            padding: 10px;
+            border: 1px solid #DDDDDD;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px #888888;
+            z-index: 9999;
+            margin: auto;
+            width: 200px;
+        }
 
+        /* Styling for three panel page */
+        .panel-container {
+            padding: 10px;
+            display: flex;
+            height: 400px;
+            justify-content: center;
+        }
+
+        .panel-left {
+            background-color: #3498DB;
+            text-align: center;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 200px;
+            z-index: 1;
+        }
+
+        .panel-right {
+            background-color: #2ECC71;
+            text-align: center;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 200px;
+            z-index: 1;
+        }
+
+        .panel-middle {
+            background-color: #E74C3C;
+            text-align: center;
+            width: auto;
+            z-index: 2;
+        }
+    </style>
 </head>
 
 <body>
@@ -93,6 +140,7 @@
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- navbar area -->
+
         <div id="home" class="header-hero" style="background-color: #3157dc">
             <div class="container">
                 <div class="justify-center row">
@@ -104,8 +152,12 @@
                                 data-wow-duration="1.3s" data-wow-delay="0.5s">Fullstack Software Engineer</h2>
                             <p class="mb-8 text-white text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
                                 LIS3361 WWW PAGE DESIGN/MANAGEMENT</p>
+                            <!-- <div class="justify-center row">
+                                <iframe class="flex" src="menu.html"></iframe>
+                            </div> -->
                             <a href="https://tailwindcss.com/" class="main-btn gradient-btn gradient-btn-2 wow fadeInUp"
                                 data-wow-duration="1.3s" data-wow-delay="1.1s">Built with Tailwind CSS</a>
+
                         </div> <!-- header hero content -->
                     </div>
                 </div> <!-- row -->
@@ -122,6 +174,25 @@
         </div> <!-- header hero -->
     </header>
     <!--====== HEADER PART ENDS ======-->
+
+    <!--====== PANEL PART STARTS ======-->
+    <section class="pt-20">
+        <div class="message-box">
+            <p>This is a message box with some content.</p>
+        </div>
+        <div class="panel-container">
+            <div class="panel panel-left">
+                <p>Left Panel</p>
+            </div>
+            <div class="panel panel-middle">
+                <p>Middle Panel</p>
+            </div>
+            <div class="panel panel-right">
+                <p>Right Panel</p>
+            </div>
+        </div>
+    </section>
+    <!--====== PANEL PART ENDS ======-->
 
     <!--====== TOOLKIT PART START ======-->
     <section id="features" class="services-area pt-120">
@@ -326,8 +397,7 @@
                                 <li class="ml-12">September 2, 2022</li>
                             </ul>
                             <p class="mb-6 text-2xl leading-snug text-gray-900">Project 1</p>
-                            <a class="text-theme-color-2"
-                                href="https://ethglobal.com/showcase/fitmint-247pb">
+                            <a class="text-theme-color-2" href="https://ethglobal.com/showcase/fitmint-247pb">
                                 Demo
                                 <i class="ml-2 lni lni-chevron-right"></i>
                             </a>
@@ -344,8 +414,7 @@
                                 <li class="ml-12">September 2, 2022</li>
                             </ul>
                             <p class="mb-6 text-2xl leading-snug text-gray-900">Project 2</p>
-                            <a class="text-theme-color-2"
-                                href="https://devpost.com/software/unique-pod">
+                            <a class="text-theme-color-2" href="https://devpost.com/software/unique-pod">
                                 Demo
                                 <i class="ml-2 lni lni-chevron-right"></i>
                             </a>
@@ -362,8 +431,7 @@
                                 <li class="ml-12">September 2, 2022</li>
                             </ul>
                             <p class="mb-6 text-2xl leading-snug text-gray-900">Project 3</p>
-                            <a class="text-theme-color-2"
-                                href="https://github.com/jongan69/ai-readme">
+                            <a class="text-theme-color-2" href="https://github.com/jongan69/ai-readme">
                                 Demo
                                 <i class="ml-2 lni lni-chevron-right"></i>
                             </a>
@@ -391,17 +459,18 @@
                     <div class="w-full lg:w-1/2">
                         <div class="lg:mt-12 subscribe-content">
                             <h2 class="text-2xl font-bold sm:text-4xl subscribe-title">
-                                Subscribe to My Newsletter
+                                Send me a message!
                             </h2>
                         </div>
                     </div>
                     <div class="w-full lg:w-1/2">
                         <div class="mt-12 subscribe-form">
-                            <form action="#" class="relative focus:outline-none">
+                            <iframe src="contact.html" seamless></iframe>
+                            <!-- <form action="#" class="relative focus:outline-none">
                                 <input type="email" placeholder="Enter eamil"
                                     class="w-full py-4 pl-6 pr-40 duration-300 border-2 rounded focus:border-theme-color focus:outline-none">
                                 <button class="main-btn gradient-btn">Subscribe</button>
-                            </form>
+                            </form> -->
                         </div>
                     </div>
                 </div> <!-- row -->
